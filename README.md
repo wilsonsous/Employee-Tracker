@@ -16,7 +16,7 @@
 - NODE.JS
 
 ## Link
-You can view the demo here : https://drive.google.com/file/d/1c2Uz9L_qFJVnJhDbxMD-fXRR5klSVjaB/view
+You can view the demo here : 
 
 ## Visuals
 
