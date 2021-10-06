@@ -15,6 +15,7 @@ This application will assist in keeping track of the current company directory w
 - CSS
 - JAVASCRIPT
 - NODE.JS
+- MySQL
 
 ## Link
 You can view the demo here : 
