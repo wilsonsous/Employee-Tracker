@@ -16,7 +16,7 @@
 - NODE.JS
 
 ## Link
-You can view the brief here : https://drive.google.com/file/d/1c2Uz9L_qFJVnJhDbxMD-fXRR5klSVjaB/view
+You can view the demo here : https://drive.google.com/file/d/1c2Uz9L_qFJVnJhDbxMD-fXRR5klSVjaB/view
 
 ## Visuals
 <img width="1791" alt="Screen Shot 2021-10-03 at 11 47 35 PM" src="https://user-images.githubusercontent.com/78562158/135789935-2d342a9d-bb1e-4be7-9d8a-0637a4e600d1.png">
