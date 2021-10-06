@@ -11,13 +11,13 @@ const connection = mysql.createConnection({
   user: 'root',
 
   // Be sure to update with your own MySQL password!
-  password: 'password1234',
+  password: '',
   database: 'companySQL_db',
 });
 
 connection.connect((err) => {
   if (err) throw err;
-  console.log(functioning)
+  console.log("functioning")
   runSearch();
 });
 
@@ -188,17 +188,17 @@ function viewAllEmployeesDepartment() {
         .prompt([
           {
             type: "input",
-            message: "Please enter the role's title?",
+            message: "Please enter the role's title",
             name: "roleTitle",
           },
           {
             type: "number",
-            message: "Please enter the role's salary?",
+            message: "Please enter the role's salary",
             name: "salary",
           },
           {
             type: "list",
-            message: "Please enter what department the role is in?",
+            message: "Please enter what department the role is in",
             name: "department",
             choices: departmentArray,
           },
@@ -241,23 +241,23 @@ function viewAllEmployeesDepartment() {
             .prompt([
               {
                 type: "input",
-                message: "Please enter employee's first name?",
+                message: "Please enter employee's first name",
                 name: "first_name",
               },
               {
                 type: "input",
-                message: "Please enter employee's last name?",
+                message: "Please enter employee's last name",
                 name: "last_name",
               },
               {
                 type: "list",
-                message: "Please enter employee's role?",
+                message: "Please enter employee's role",
                 name: "role_id",
                 choices: rolesArray,
               },
               {
                 type: "list",
-                message: "Please enter employee's manager?",
+                message: "Please enter employee's manager",
                 name: "manager_id",
                 choices: managersArray,
               },
@@ -314,13 +314,13 @@ function viewAllEmployeesDepartment() {
             .prompt([
               {
                 type: "list",
-                message: "Please select the employee to update?",
+                message: "Please select the employee to update",
                 name: "employee_id",
                 choices: employeeArray,
               },
               {
                 type: "list",
-                message: "Please select the new role for the employee?",
+                message: "Please select the new role for the employee",
                 name: "role_id",
                 choices: rolesArray,
               },

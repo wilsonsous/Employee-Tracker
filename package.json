@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/wilsonsous/Employee-Tracker/issues"
   },
-  "homepage": "https://github.com/wilsonsous/Employee-Tracker#readme"
+  "homepage": "https://github.com/wilsonsous/Employee-Tracker#readme",
+  "dependencies": {
+    "inquirer": "^8.1.5",
+    "mysql": "^2.18.1"
+  }
 }
