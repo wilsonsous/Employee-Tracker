@@ -1,4 +1,5 @@
-# Team-Profile-Generator
+# Employee-Tracker
+This application will assist in keeping track of the current company directory with the ability of viewing, editing, and updating the company directory.
 
 
   # Table of Contents 
