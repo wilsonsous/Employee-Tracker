@@ -20,6 +20,9 @@ You can view the demo here : https://drive.google.com/file/d/1c2Uz9L_qFJVnJhDbxM
 
 ## Visuals
 
+<img width="1792" alt="Screen Shot 2021-10-06 at 4 27 54 PM" src="https://user-images.githubusercontent.com/78562158/136278333-fae8928a-57e5-4145-98f7-8fddd8b6f2f5.png">
+
+
 
 
 # License
