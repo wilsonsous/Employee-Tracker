@@ -1,5 +1,6 @@
 const mysql = require('mysql');
 const inquirer = require('inquirer');
+// const express = require('express');
 
 const connection = mysql.createConnection({
   host: 'localhost',
@@ -15,24 +16,19 @@ const connection = mysql.createConnection({
   database: 'companySQL_db',
 });
 
-connection.connect((err) => {
-  if (err) throw err;
-  console.log("functioning")
-  runSearch();
-});
 
 const runSearch = () => {
   inquirer
-    .prompt({
-        name: "action",
-        type: "rawlist",
+  .prompt({
+    name: "action",
+    type: "rawlist",
         message: "What would you like to do?",
         choices: [
           "View All Employees",
-          "View All Employees By Department",
-          "View All Employees By Manager",
-          "View All Roles",
-          "View All Departments",
+          "List All Employees By Department",
+          "List All Employees By Manager",
+          "List All Roles",
+          "List All Departments",
           "Add Department",
           "Add Role",
           "Add Employee",
@@ -44,7 +40,7 @@ const runSearch = () => {
 
     .then((answer) => {
       switch (answer.action) {
-        case 'List All Employees':
+        case 'View All Employees':
           viewAllEmployees();
           break;
 
@@ -81,7 +77,9 @@ const runSearch = () => {
 };
 
 function viewAllEmployees() {
-    connection.query("SELECT employee.first_name, employee.last_name, role.title, role.salary, concat(manager.first_name, ' ', manager.last_name) as manager FROM employee INNER JOIN role ON employee.role_id = role.id LEFT OUTER JOIN employee as manager on employee.manager_id = manager.id", function (err, data) {
+    connection.query(
+      "SELECT employee.first_name, employee.last_name, role.title, role.salary, concat(manager.first_name, ' ', manager.last_name) as manager FROM employee INNER JOIN role ON employee.role_id = role.id LEFT OUTER JOIN employee as manager on employee.manager_id = manager.id"//
+      ,(err, data) => {
       if (err) throw err;
       console.log("HERE'S THE CURRENT EMPLOYEE DIRECTORY:");
       console.table(data);
@@ -118,7 +116,7 @@ function nextStep() {
     .then((answer) => {
         switch (answer.action) {
             case "Main Menu":
-              mainTask();
+              runSearch();
               break;
     
             case "Exit":
@@ -347,3 +345,9 @@ function viewAllEmployeesDepartment() {
     connection.end();
   }
   
+  connection.connect((err) => {
+    if (err) throw err;
+    console.log("MySQl connected...")
+    console.log(`connected as id ${connection.threadId}`);
+    runSearch();
+  });

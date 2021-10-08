@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/wilsonsous/Employee-Tracker#readme",
   "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
     "inquirer": "^8.1.5",
     "mysql": "^2.18.1"
   }
